@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore odio
+        eos cumque molestiae. Eligendi reprehenderit vero nihil tempora est
+        perferendis rerum vel cupiditate hic porro tempore, in quaerat
+        recusandae ut.
+      </p>
+    </header>
+    <main id="main-container">
+      <section>
+        <h1>My aswome DOM re learning</h1>
+        <ul>
+          <li>fastastic</li>
+          <li>moment</li>
+          <li>Bangladesh</li>
+          <li>Hellow everyone</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ol>
+          <li>dom-1</li>
+          <li>dom-2</li>
+          <li>dom-3</li>
+        </ol>
+      </section>
+      <section>
+        <h1 id="places-title">Place i like visit</h1>
+        <ul>
+          <li class="same">Sundorban-1</li>
+          <li class="same">Sundorban-2</li>
+          <li class="same">Sundorban-3</li>
+          <li>Sundorban-4</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="DOM/extra-section.js"></script>
+    <script src="DOM/dom.js"></script>
+    <script>
+      // option 1 getElementTagName
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const h1 of allHeadings) {
+        // console.log(h1.innerText);
+      }
+      // option 2 getElementById
+      const fruitsTitle = document.getElementById("fruits-title");
+      fruitsTitle.innerText = "fruits changed by js";
+      // option 3 getElementByClassName
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        console.log(place.innerText);
+      }
+      // option 4 quarySelector
+      // option 5 quarySelecrorAll
+      const someLi = document.querySelectorAll("fruits-container li");
+      // console.log(someLi);
+      for (const li of someLi) {
+        console.log(li.innerText);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+const herNumbers = factorial(10);

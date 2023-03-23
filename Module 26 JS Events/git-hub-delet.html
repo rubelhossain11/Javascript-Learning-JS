@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delet</title>
+  </head>
+  <body>
+    <h1 id="secret-info">The heading related by button type</h1>
+    <input id="delet-confirm" type="text" placeholder="please type delet" />
+    <button id="btn-delet" disabled>Delet</button>
+
+    <script>
+      document
+        .getElementById("delet-confirm")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          const deletButton = document.getElementById("btn-delet");
+          if (text === "delet") {
+            deletButton.removeAttribute("disabled");
+          } else {
+            deletButton.setAttribute("disabled", true);
+          }
+        });
+      document
+        .getElementById("btn-delet")
+        .addEventListener("click", function () {
+          const secret = document.getElementById("secret-info");
+          secret.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

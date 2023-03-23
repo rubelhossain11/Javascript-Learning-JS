@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM summary</title>
+  </head>
+  <body>
+    <h1>Final DOM events handle</h1>
+    <h3 id="hadler-status">Default text</h3>
+    <p id="input-text-display">Default text</p>
+    <input id="input-field" type="text" />
+    <button id="btn-update">update</button>
+    <button onclick="handleOnclick()">
+      handle Event by Add onclick Function</button
+    ><br /><br />
+    <button id="event-listener">Handle Event by addEventlistener</button
+    ><br /><br />
+
+    <script>
+      // option 1
+      function handleOnclick() {
+        const hadlerStatus = document.getElementById("hadler-status");
+        hadlerStatus.innerText =
+          "hadler by function attached on click attribute";
+      }
+      //   option 2
+      document
+        .getElementById("event-listener")
+        .addEventListener("click", function () {
+          const hadlerStatus = document.getElementById("hadler-status");
+          hadlerStatus.innerText = "text updated by add Event listener button";
+        });
+      // option 2 recap
+      document
+        .getElementById("btn-update")
+        .addEventListener("click", function () {
+          const inputFiled = document.getElementById("input-field");
+          const inputText = inputFiled.value;
+          const p = document.getElementById("input-text-display");
+          p.innerText = inputText;
+          inputFiled.value = "";
+        });
+    </script>
+    <script src="summary/summary.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center font-semibold">
+        My bank <span class="text-red-300">Account</span>
+      </h1>
+    </header>
+    <div class="bg-fuchsia-700 rounded w-9/12 mx-auto mt-8 p-3">
+      <h3 class="mb-2 text-3xl font-semibold">Login</h3>
+      <input
+        class="block p-1 w-3/4 rounded-md"
+        type="email"
+        name=""
+        id="Email"
+        placeholder="Plese Enter Your Email"
+      />
+      <input
+        class="block mt-2 p-1 w-3/4 rounded-md"
+        type="password"
+        name=""
+        id="Password"
+        placeholder="Plese Enter Your Password"
+      />
+      <button
+        id="btn-button"
+        class="bg-red-400 p-2 mt-3 px-4 text-white text-xl font-semibold rounded hover:bg-green-700"
+      >
+        Submit
+      </button>
+    </div>
+
+    <script src="js/bank.js"></script>
+  </body>
+</html>

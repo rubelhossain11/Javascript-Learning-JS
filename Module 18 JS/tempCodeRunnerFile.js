@@ -1,0 +1,1 @@
+text = text.slice(2, 4);
